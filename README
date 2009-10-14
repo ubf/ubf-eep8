@@ -1,0 +1,77 @@
+
+This is ubf-eep8, a framework for integrating UBF and EEP8.  This
+repository depends on the ubf open source repository.
+
+
+To build
+========
+
+1. Get and install an erlang system
+   http://www.erlang.org
+
+2. Get and install ubf
+   http://github.com/norton/ubf
+
+3. Change to the src directory and type make
+   $ cd src
+   $ make
+
+4. Run the unit test
+   $ make check
+
+
+**NOTE**
+
+Before make, edit "src/Makefile" to change the "MY_UBF_EBIN" variable
+to point to where the ebin directory that contains ubf's .beam files
+and the "MY_UBF_INCLUDE" variable to point to where the include
+directory that contains ubf's .hrl files.
+   
+   
+Documentation -- Where should I start?
+======================================
+
+This README is a good first step.  Check out and build using the "To
+build" instructions above.
+
+EEP8 samples and eunit tests can be found in the Unit-EUnit-Files
+directory.
+
+
+What is UBF?
+============
+
+UBF is the "Universal Binary Format", designed and implemented by Joe
+Armstrong.  See http://www.sics.se/~joe/ubf.html for full details.  A
+really short summary:
+
+   * UBF(A) is a protocol above a stream transport (e.g. TCP/IP), for
+     encoding structured dataroughly equivalent to well-formed XML.
+
+   * UBF(B) is a programming langauge for describing types in UBF(A)
+     and protocols between clients and servers. UBF(B) is roughly
+     equivalent to to Verified XML, XML-schemas, SOAP and WDSL.
+
+     
+What is EEP8?
+=============
+
+EEP8 is an extension to the Erlang language for declaring sets of
+Erlang terms to form a particular type, effectively forming a specific
+subtype of the set of all Erlang terms. Subsequently, these types can
+be used to specify types of record fields and argument and return
+values of functions.  See http://www.erlang.org/eeps/eep-0008.html for
+full details.
+
+
+Credits
+=======
+
+Many, many thanks to Joe Armstrong, UBF's designer and original
+implementor.
+
+Thanks to Kostis Sagonas and Tobias Lindahl, EEP8's designers and
+implementors.
+
+Gemini Mobile Technologies, Inc. has approved the release of this
+repository under an MIT license.
