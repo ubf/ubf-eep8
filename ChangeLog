@@ -1,3 +1,7 @@
+2009-12-26 14:40 JST  norton
+
+	* src/Makefile: add edoc target
+
 2009-10-14 12:00 JST  norton
 
         * ChangeLog: Add new ChangeLog

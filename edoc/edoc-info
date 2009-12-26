@@ -1,0 +1,3 @@
+{application,ubf}.
+{packages,[]}.
+{modules,[eep8_contract_parser,eep8_types_builtin,eep8_types_predefined]}.
