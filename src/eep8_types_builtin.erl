@@ -1,4 +1,3 @@
-%%% $Id$
 %%%
 
 %%% @doc UBF EEP8 builtin types
