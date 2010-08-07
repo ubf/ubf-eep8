@@ -1,0 +1,4 @@
+#DEP  src/erl-tools/gmt-bom                  *
+#DEP  src/erl-apps/gmt-util                  *
+
+#DEP  src/erl-tools/ubf                      *
