@@ -1,5 +1,5 @@
 %%%----------------------------------------------------------------------
-%%% Description: EEP8 Implmentation Utilities
+%%% Description: EEP8 Implementation Utilities
 %%%----------------------------------------------------------------------
 
 -ifndef(eep8_impl).
