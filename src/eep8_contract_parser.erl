@@ -150,6 +150,9 @@ eep82ubf({atom,_,X})
 eep82ubf({integer,_,X})
   when is_integer(X) ->
     {integer,X};
+eep82ubf({op,_,'-',{integer,_,X}})
+  when is_integer(X) ->
+    {integer,-1*X};
 eep82ubf({type,_,binary,[{integer,_,0},{integer,_,0}]}) ->
     {binary,<<"">>};
 eep82ubf({type,_,list,[T]}) ->
@@ -157,6 +160,15 @@ eep82ubf({type,_,list,[T]}) ->
 eep82ubf({type,_,range,[{integer,_,Min},{integer,_,Max}]})
   when is_integer(Min) andalso is_integer(Max) ->
     {range,Min,Max};
+eep82ubf({type,_,range,[{op,_,'-',{integer,_,Min}},{integer,_,Max}]})
+  when is_integer(Min) andalso is_integer(Max) ->
+    {range,-1*Min,Max};
+eep82ubf({type,_,range,[{integer,_,Min},{op,_,'-',{integer,_,Max}}]})
+  when is_integer(Min) andalso is_integer(Max) ->
+    {range,Min,-1*Max};
+eep82ubf({type,_,range,[{op,_,'-',{integer,_,Min}},{op,_,'-',{integer,_,Max}}]})
+  when is_integer(Min) andalso is_integer(Max) ->
+    {range,-1*Min,-1*Max};
 eep82ubf({type,_,tuple=T,any}) ->
     {predef,T};
 eep82ubf({type,_,tuple,L}) ->
