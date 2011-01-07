@@ -6,6 +6,8 @@
 
 %% NOTE the following one line
 -compile({parse_transform,eep8_contract_parser}).
+-compile(nowarn_unused_record).
+-compile(nowarn_unused_type).
 
 
 %%%----------------------------------------------------------------------

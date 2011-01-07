@@ -1,7 +1,7 @@
-%%% Description: eunit test for ubf and eep8
+%%% Description: eunit tests for ubf and eep8
 %%%-------------------------------------------------------------------
 
--module(ubf_eep8_samples_test).
+-module(ubf_eep8_samples_tests).
 
 -include_lib("eunit/include/eunit.hrl").
 
