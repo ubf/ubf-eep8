@@ -3,7 +3,7 @@
 {application, ubf_eep8,
  [
   {description, "Universal Binary Format and Erlang Enhancement Proposal 8"},
-  {vsn, "0.1.0"},
+  {vsn, "0.1.1"},
   {registered, []},
   {applications, [kernel, stdlib, sasl]},
   {modules, [eep8_contract_parser.erl
