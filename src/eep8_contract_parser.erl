@@ -85,7 +85,7 @@ get_spec_info(Module) ->
         {ok, AbstrCode} ->
             case get_record_and_type_info(Module) of
                 {ok, RecordAndType} ->
-                    dialyzer_utils:get_spec_info(AbstrCode, RecordAndType);
+                    dialyzer_utils:get_spec_info(Module, AbstrCode, RecordAndType);
                 Err ->
                     Err
             end;
