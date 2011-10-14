@@ -122,11 +122,11 @@ file(Name, VSN, Imports, RecordAndTypeInfo) ->
                       [{Type, TypeDef, ""}|Acc]
                   catch
                       throw:notimplemented -> Acc;
-                        throw:unsupported -> Acc
+                      throw:unsupported -> Acc
                   end;
              ({{record,Record},[{_Arity,Fields}]}, Acc) ->
                   try
-                      %% @todo internal record representation is not clear??
+                      %% @TODO internal record representation is not clear?
                       %% [ io:format("~n~p/~p: ~p~n", [Record, _Arity, Field]) || Field <- Fields ],
                       RecordDef = {record,Record,
                                    [{alt,{atom,undefined},
@@ -136,7 +136,7 @@ file(Name, VSN, Imports, RecordAndTypeInfo) ->
                       [{Record, RecordDef, ""}|Acc]
                   catch
                       throw:notimplemented -> Acc;
-                        throw:unsupported -> Acc
+                      throw:unsupported -> Acc
                   end
           end,
     Types = lists:foldl(Fun, [], dict:to_list(RecordAndTypeInfo)),
