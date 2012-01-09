@@ -328,7 +328,7 @@ repository under an MIT license.</p>
 
 
 <table width="100%" border="0" summary="list of modules">
-<tr><td><a href="https://github.com/norton/ubf-eep8/blob/dev/doc/eep8_contract_parser.md" class="module">eep8_contract_parser</a></td></tr>
-<tr><td><a href="https://github.com/norton/ubf-eep8/blob/dev/doc/eep8_types_builtin.md" class="module">eep8_types_builtin</a></td></tr>
-<tr><td><a href="https://github.com/norton/ubf-eep8/blob/dev/doc/eep8_types_predefined.md" class="module">eep8_types_predefined</a></td></tr></table>
+<tr><td><a href="https://github.com/norton/ubf-eep8/blob/master/doc/eep8_contract_parser.md" class="module">eep8_contract_parser</a></td></tr>
+<tr><td><a href="https://github.com/norton/ubf-eep8/blob/master/doc/eep8_types_builtin.md" class="module">eep8_types_builtin</a></td></tr>
+<tr><td><a href="https://github.com/norton/ubf-eep8/blob/master/doc/eep8_types_predefined.md" class="module">eep8_types_predefined</a></td></tr></table>
 
