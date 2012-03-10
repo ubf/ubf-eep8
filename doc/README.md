@@ -3,7 +3,7 @@
 #Universal Binary Format and EEP8#
 
 
-Copyright (c) 2011 by Joseph Wayne Norton
+Copyright (c) 2011-2012 by Joseph Wayne Norton
 
 __Authors:__ Joseph Wayne Norton ([`norton@alum.mit.edu`](mailto:norton@alum.mit.edu)).<p>This is UBF-EEP8, a framework for integrating UBF and EEP8.  This
 repository depends on the UBF open source repository.</p>
