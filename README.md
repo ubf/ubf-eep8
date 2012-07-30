@@ -18,7 +18,7 @@ please follow this recipe:</p>
 
 <pre><tt>$ mkdir working-directory-name
 $ cd working-directory-name
-$ git clone git://github.com/norton/ubf-eep8.git ubf_eep8
+$ git clone git://github.com/ubf/ubf-eep8.git ubf_eep8
 $ cd ubf_eep8
 $ ./rebar get-deps
 $ ./rebar clean
@@ -113,7 +113,7 @@ Create working directory
 
 <pre><tt>$ mkdir working-directory-name
 $ cd working-directory-name
-$ repo init -u git://github.com/norton/manifests.git -m ubf-eep8-default.xml</tt></pre>
+$ repo init -u git://github.com/ubf/manifests.git -m ubf-eep8-default.xml</tt></pre>
 
 
 <table><tr>
@@ -123,7 +123,7 @@ Note
 <td class="content">Your "Git" identity is needed during the init step.  Please
 enter the name and email of your GitHub account if you have one.  Team
 members having read-write access are recommended to use "repo init -u
-<a href="mailto:git@github.com">git@github.com</a>:norton/manifests.git -m ubf-eep8-default-rw.xml".</td>
+<a href="mailto:git@github.com">git@github.com</a>:ubf/manifests.git -m ubf-eep8-default-rw.xml".</td>
 </tr></table>
 
 
@@ -328,7 +328,7 @@ repository under an MIT license.</p>
 
 
 <table width="100%" border="0" summary="list of modules">
-<tr><td><a href="https://github.com/norton/ubf-eep8/blob/master/doc/eep8_contract_parser.md" class="module">eep8_contract_parser</a></td></tr>
-<tr><td><a href="https://github.com/norton/ubf-eep8/blob/master/doc/eep8_types_builtin.md" class="module">eep8_types_builtin</a></td></tr>
-<tr><td><a href="https://github.com/norton/ubf-eep8/blob/master/doc/eep8_types_predefined.md" class="module">eep8_types_predefined</a></td></tr></table>
+<tr><td><a href="https://github.com/ubf/ubf-eep8/blob/master/doc/eep8_contract_parser.md" class="module">eep8_contract_parser</a></td></tr>
+<tr><td><a href="https://github.com/ubf/ubf-eep8/blob/master/doc/eep8_types_builtin.md" class="module">eep8_types_builtin</a></td></tr>
+<tr><td><a href="https://github.com/ubf/ubf-eep8/blob/master/doc/eep8_types_predefined.md" class="module">eep8_types_predefined</a></td></tr></table>
 
