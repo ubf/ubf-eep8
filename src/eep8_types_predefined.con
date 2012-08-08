@@ -98,6 +98,6 @@
 %%%%%%
 +TYPES
 
-any() = term();
-nil() = [];
-none() = void().
+any() :: term();
+nil() :: [];
+none() :: void().

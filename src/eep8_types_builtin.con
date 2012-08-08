@@ -99,17 +99,17 @@
 %%%%%%
 +TYPES
 
-boolean() = false | true;
-byte() = 0..255;
-char() = 0..16#10ffff;
-mfa() = {atom(),atom(),byte()};
-module() = atom();
-neg_integer() = ..-1;
-no_return() = none();
-node() = atom();
-non_neg_integer() = 0..;
-nonempty_string() = [char()]+;
-number() = integer() | float();
-pos_integer() = 1..;
-string() = [char()];
-timeout() = infinity | non_neg_integer().
+boolean() :: false | true;
+byte() :: 0..255;
+char() :: 0..16#10ffff;
+mfa() :: {atom(),atom(),byte()};
+module() :: atom();
+neg_integer() :: ..-1;
+no_return() :: none();
+node() :: atom();
+non_neg_integer() :: 0..;
+nonempty_string() :: [char()]+;
+number() :: integer() | float();
+pos_integer() :: 1..;
+string() :: [char()];
+timeout() :: infinity | non_neg_integer().
