@@ -71,6 +71,7 @@
 %%     - boolean()
 %%     - list()
 %%     - term()
+%%     - none()
 %%
 %%   via ubf contract
 %%     - byte()

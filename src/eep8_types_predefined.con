@@ -74,11 +74,11 @@
 %%     - binary()
 %%     - float()
 %%     - list(Type)
+%%     - none()
 %%
 %%   via ubf contract
 %%     - any()
 %%     - nil()
-%%     - none()
 %%
 %%   not implemented
 %%     - <<_:Erlang_Integer>>
@@ -99,5 +99,4 @@
 +TYPES
 
 any() :: term();
-nil() :: [];
-none() :: void().
+nil() :: [].
