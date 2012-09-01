@@ -68,11 +68,11 @@
 %% Supported eep8 predefined types:
 %%
 %%   via ubf predefined types
+%%     - boolean()
 %%     - list()
 %%     - term()
 %%
 %%   via ubf contract
-%%     - boolean()
 %%     - byte()
 %%     - char()
 %%     - mfa()
@@ -99,7 +99,6 @@
 %%%%%%
 +TYPES
 
-boolean() :: false | true;
 byte() :: 0..255;
 char() :: 0..16#10ffff;
 mfa() :: {atom(),atom(),byte()};

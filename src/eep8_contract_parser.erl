@@ -177,6 +177,7 @@ eep82ubf({type,_,union,[A,B]}) ->
     {alt,eep82ubf(A),eep82ubf(B)};
 eep82ubf({type,_,T,[]})
   when T == atom;
+       T == boolean;
        T == binary;
        T == float;
        T == integer;
@@ -185,8 +186,7 @@ eep82ubf({type,_,T,[]})
     {predef,T};
 %% builtin
 eep82ubf({type,_,T,[]})
-  when T == boolean;
-       T == byte;
+  when T == byte;
        T == char;
        T == mfa;
        T == module;
