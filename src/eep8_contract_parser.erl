@@ -31,7 +31,7 @@ parse_transform(In, _Opts) ->
     Out = case dialyzer_utils:get_record_and_type_info(In) of
               {ok, RecordAndTypeInfo} ->
                   case file(Name, VSN, BuiltinImports++PredefinedImports++Imports, RecordAndTypeInfo) of
-                      {ok, Contract, _Header} ->
+                      {ok, Contract} ->
                           %% io:format("Contract added: ~p~n", [Contract]),
                           contract_parser:parse_transform_contract(In, Contract);
                       {error, Why} ->
@@ -182,7 +182,8 @@ eep82ubf({type,_,T,[]})
        T == float;
        T == integer;
        T == list;
-       T == term ->
+       T == term;
+       T == none ->
     {predef,T};
 %% builtin
 eep82ubf({type,_,T,[]})
