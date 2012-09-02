@@ -7,8 +7,6 @@
   {registered, []},
   {applications, [kernel, stdlib, sasl]},
   {modules, [eep8_contract_parser.erl
-             , eep8_types_builtin.erl
-             , eep8_types_predefined.erl
             ]},
   {env, []}
  ]}.

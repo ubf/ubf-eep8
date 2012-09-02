@@ -25,12 +25,11 @@ parse_transform(In, _Opts) ->
     %% io:format("In:~p~n   Opts: ~p~n",[In, _Opts]),
     Name = case [X || {attribute, _, module, X} <- In] of [M] -> atom_to_list(M) end,
     VSN = case [X || {attribute, _, vsn, X} <- In] of [V] -> V; _ -> "" end,
-    BuiltinImports = [{eep8_types_builtin, eep8_types_builtin:contract_types()}],
-    PredefinedImports = [{eep8_types_predefined, eep8_types_predefined:contract_types()}],
+    BuiltinImports = [{ubf_types_builtin, contract_parser:builtInTypesErlang()}],
     Imports = [X || {attribute, _, add_types, X} <- In],
     Out = case dialyzer_utils:get_record_and_type_info(In) of
               {ok, RecordAndTypeInfo} ->
-                  case file(Name, VSN, BuiltinImports++PredefinedImports++Imports, RecordAndTypeInfo) of
+                  case file(Name, VSN, BuiltinImports++Imports, RecordAndTypeInfo) of
                       {ok, Contract} ->
                           %% io:format("Contract added: ~p~n", [Contract]),
                           contract_parser:parse_transform_contract(In, Contract);
@@ -131,7 +130,7 @@ file(Name, VSN, Imports, RecordAndTypeInfo) ->
                       RecordDef = {record,Record,
                                    [{alt,{atom,undefined},
                                      {tuple,[ {atom,Field} || {Field,_} <- Fields ]}}
-                                    , {predef,term}]
+                                    , {predef,any}]
                                    ++ [ {atom,todo} || {_,_TodoFieldDef} <- Fields ]},
                       [{Record, RecordDef, ""}|Acc]
                   catch
