@@ -25,7 +25,7 @@ parse_transform(In, _Opts) ->
     %% io:format("In:~p~n   Opts: ~p~n",[In, _Opts]),
     Name = case [X || {attribute, _, module, X} <- In] of [M] -> atom_to_list(M) end,
     VSN = case [X || {attribute, _, vsn, X} <- In] of [V] -> V; _ -> "" end,
-    BuiltinImports = [{ubf_types_builtin, contract_parser:builtInTypesErlang()}],
+    BuiltinImports = [{ubf_types_builtin, contract_parser:builtin_types(erlang)}],
     Imports = [X || {attribute, _, add_types, X} <- In],
     Out = case dialyzer_utils:get_record_and_type_info(In) of
               {ok, RecordAndTypeInfo} ->
