@@ -1,3 +1,3 @@
 {application,ubf_eep8}.
 {packages,[]}.
-{modules,[eep8_contract_parser,eep8_types_builtin,eep8_types_predefined]}.
+{modules,[eep8_contract_parser]}.
