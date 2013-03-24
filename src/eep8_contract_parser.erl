@@ -115,7 +115,16 @@ get_spec(Info, Key) ->
 
 file(Name, VSN, Imports, RecordAndTypeInfo) ->
     %% io:format("~n~p ~p~n~p~n~p~n", [Name, VSN, Imports, RecordAndTypeInfo]),
-    Fun = fun({{type,Type}, {_,Body,[]}}, Acc) ->
+    Fun = fun({{type,Type,0}, {_,Body,[]}}, Acc) ->
+                  try
+                      TypeDef = eep82ubf(Body),
+                      [{Type, TypeDef, ""}|Acc]
+                  catch
+                      throw:notimplemented -> Acc;
+                      throw:unsupported -> Acc
+                  end;
+             %% pre-R16B format
+             ({{type,Type}, {_,Body,[]}}, Acc) ->
                   try
                       TypeDef = eep82ubf(Body),
                       [{Type, TypeDef, ""}|Acc]
