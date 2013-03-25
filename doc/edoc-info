@@ -1,3 +1,4 @@
+%% encoding: UTF-8
 {application,ubf_eep8}.
 {packages,[]}.
 {modules,[eep8_contract_parser]}.
